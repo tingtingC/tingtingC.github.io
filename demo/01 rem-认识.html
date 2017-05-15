@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html style="font-size: 100px">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>rem&em</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            line-height: 1;/*和字体大小一致*/
+            /*现在我的字体大小默认是16px*/
+            font-size: 50px;
+        }
+        .em{
+            font-size: 2em;
+        }
+        .rem{
+            font-size: 2rem;
+        }
+
+        /*
+        1.两个div的字体大小分别是多少？
+        em div  32px
+        rem div 32px
+
+        2.解释rem,em分别是基于谁的字体大小。
+        em  基于父容器的字体大小来的
+        rem r是什么意思？  root的意思  根元素的意思
+            基于根元素html元素的字体大小来的
+
+        */
+    </style>
+</head>
+<body>
+    <div class="em">A</div>
+    <div class="rem">A</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>rem适配</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            font-size: 0.48rem;
+            color: #fff;
+            background: red;
+        }
+        /*
+        1.流式布局适配方式：达到宽度的适配  内容没有自适应改变高度也没有自适应改变
+        2.rem适配方式：高度和宽度都自适应 内容可自适应   等比例缩放适配
+        */
+        html{
+            font-size: 50px;
+        }
+        /*1.把页面上所有px的单位变成了rem*/
+        /*2.当我在改变rem的基准值 html的字体大小的时候  页上的容器在等比例缩放*/
+        /*3.适配
+            假设320px的设备 设置的字体大小是  50px
+            那么640px的设备 设置的字体大小是  100px
+        */
+        /*4.使用媒体查询*/
+        @media (min-width: 320px) {
+            html{
+                font-size: 50px;
+            }
+        }
+        /*5.需要适配移动端主流设备  Iphone6 375px  有很多*/
+        @media (min-width: 375px) {
+            html{
+                font-size: 58.59375px;
+            }
+        }
+        @media (min-width: 640px) {
+            html{
+                font-size: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>购物车</header>
+</body>
+</html>
